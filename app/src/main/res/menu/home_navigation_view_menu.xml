@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group>
+        <item
+            android:id="@+id/notification"
+            android:title="@string/setting_notification"
+            android:icon="@drawable/ic_message"
+            app:showAsAction="never"/>
+        <item
+            android:id="@+id/vacation"
+            android:title="@string/toolbar_vacation"
+            android:icon="@drawable/ic_local_hospital"
+            app:showAsAction="never"/>
+        <item
+            android:id="@+id/work_time_in_month"
+            android:title="@string/menu_work_time"
+            android:icon="@drawable/ic_work_time"
+            app:showAsAction="never"/>
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/settings"
+            android:title="@string/setting"
+            android:icon="@drawable/ic_settings"
+            app:showAsAction="never"/>
+    </group>
+
+</menu>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<item
+        android:id="@+id/check_time_sheet"
+        android:title="ລາຍງານປະຈໍາເດືອນ"
+        app:showAsAction="never"/>-->
+
+    <item
+        android:id="@+id/vacation"
+        android:title="@string/toolbar_vacation"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_local_hospital"/>
+
+    <!--<item
+        android:id="@+id/check_lost_time"
+        android:title="ກວດສອບເວລາຂາດ"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_lost_time"/>-->
+
+    <item
+        android:id="@+id/work_today"
+        android:title="@string/work_today"
+        android:icon="@drawable/ic_work_time"
+        app:showAsAction="never"/>
+
+    <!--<item
+        android:id="@+id/notification"
+        android:title="ແຈ້ງເຕືອນ"
+        app:showAsAction="never"/>-->
+
+</menu>

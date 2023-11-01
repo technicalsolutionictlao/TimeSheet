@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="10dp"
+    tools:context=".UserTimeSheetInformationActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardview"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/date"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:id="@+id/calendar"
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/date"
+                android:src="@drawable/ic_calendar" />
+
+            <TextView
+                android:id="@+id/export_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="@string/export"
+                android:textColor="@color/purple_700"
+                android:textStyle="italic"
+                app:drawableRightCompat="@drawable/ic_arrow_forward" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cardview"
+        android:layout_marginTop="5dp"
+        android:id="@+id/listView"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="5dp"/>
+
+    <TextView
+        android:id="@+id/none_service"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cardview"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="@string/out_of_service"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="15dp"
+    tools:context=".VacationActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:text="@string/toolbar_vacation"
+            android:layout_gravity="center"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/title_vacation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_vacation_day"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/vacation_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/title_vacation"
+            android:text=""
+            android:textColor="@color/black"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_sick_day"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:id="@+id/title_sick"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@+id/title_sick"
+            android:layout_marginStart="20dp"
+            android:id="@+id/sick_day"/>
+
+    </RelativeLayout>-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_vacation_condition"
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vacation_of_the_year"
+            android:checked="true"
+            android:id="@+id/vacationAYear"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vacation_sick_of_year"
+            android:checked="false"
+            android:id="@+id/sickAYear"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_use"
+            android:checked="false"
+            android:id="@+id/notUseVacationAndSick"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_vacation_qty"
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/edit_text_background"
+        android:padding="10dp"
+        android:hint="@string/hint_vacation_qty"
+        android:id="@+id/day_qty"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        tools:ignore="Autofill" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_date"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <EditText
+            android:id="@+id/date_start"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/edit_text_background"
+            android:drawableEnd="@drawable/ic_calendar"
+            android:focusable="false"
+            android:hint="@string/start"
+            android:lines="1"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textSize="14sp"
+            android:typeface="monospace"
+            tools:ignore="Autofill,TextFields" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/dash"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="RelativeOverlap" />
+
+        <EditText
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_background"
+            android:id="@+id/date_end"
+            android:padding="10dp"
+            android:lines="1"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:focusable="false"
+            android:typeface="monospace"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:hint="@string/end"
+            android:textSize="14sp"
+            android:drawableEnd="@drawable/ic_calendar"
+            tools:ignore="Autofill,TextFields" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reson"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/reason"
+        android:background="@drawable/edit_text_background"
+        android:padding="10dp"
+        android:hint="@string/hint_enter_reson"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:inputType="text"
+        android:imeOptions="actionGo"
+        tools:ignore="Autofill" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/button_background"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="@string/confirm"
+        android:id="@+id/confirm_button"/>
+
+</LinearLayout>

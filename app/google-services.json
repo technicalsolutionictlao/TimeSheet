@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "293126761790",
+    "project_id": "timesheet-cbb4a",
+    "storage_bucket": "timesheet-cbb4a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:293126761790:android:c92bc2b866dc07df07506f",
+        "android_client_info": {
+          "package_name": "com.ictlao.android.app.timesheet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "293126761790-6cckh19jil5eetfrhlmdbsh3a00n17i4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9YlaJiCG0ILRcHeH31NdGBvR3U6xHTqY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "293126761790-6cckh19jil5eetfrhlmdbsh3a00n17i4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

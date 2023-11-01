@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_700">
+
+    <TextView
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/year_and_month"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:background="@drawable/top_radius">
+
+        <NumberPicker
+            android:id="@+id/yPicker"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/view" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <NumberPicker
+            android:id="@+id/mPicker"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="0dp"
+            android:layout_toEndOf="@+id/view" />
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mPicker"
+            android:text="@string/export_method"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/real_time"
+                android:text="@string/real_time"
+                android:textColor="@color/black"
+                android:checked="true"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/modify_time"
+                android:text="@string/modify"
+                android:textColor="@color/black"
+                android:layout_marginStart="20dp"
+                android:checked="false"/>
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/export"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/radio"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_background"
+            android:padding="10dp"
+            android:text="@string/export"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/radio"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/export"
+            android:background="@drawable/button_background"
+            android:padding="10dp"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</LinearLayout>

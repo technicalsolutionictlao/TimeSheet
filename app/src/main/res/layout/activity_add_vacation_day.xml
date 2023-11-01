@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".AddVacationDayActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="@string/title_vacation"
+        android:textStyle="bold"
+        android:padding="10dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/edit_text_background"
+        android:padding="10dp"
+        android:hint="@string/hint_vacation"
+        android:id="@+id/vacationAYear"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:inputType="number"
+        android:imeOptions="actionNext"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="@string/title_sick"
+        android:textStyle="bold"
+        android:padding="10dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/edit_text_background"
+        android:padding="10dp"
+        android:hint="@string/hint_sick"
+        android:id="@+id/sickAYear"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:inputType="number"
+        android:imeOptions="actionGo"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/button_background"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:text="@string/confirm"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:id="@+id/confirm_button"/>
+
+</LinearLayout>

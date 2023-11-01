@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:id="@+id/mainDrawerLayout"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardview1"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_toEndOf="@+id/analogClock"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="normal"
+                    android:typeface="monospace" />
+
+                <AnalogClock
+                    android:id="@+id/analogClock"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <DigitalClock
+                    android:id="@+id/digitalClock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_toEndOf="@+id/date"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/title_vacation_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/digitalClock"
+                    android:layout_marginStart="0dp"
+                    android:layout_toEndOf="@+id/analogClock"
+                    android:padding="5dp"
+                    android:text="ວັນພັກ"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/vacation_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/digitalClock"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@+id/title_vacation_day"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/title_sick_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title_vacation_day"
+                    android:layout_marginStart="0dp"
+                    android:layout_toEndOf="@+id/analogClock"
+                    android:padding="5dp"
+                    android:text="ວັນລາປ່ວຍ"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/sick_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/vacation_day"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@+id/title_sick_day"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!--<TextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/cardview"
+            android:layout_marginBottom="50dp"
+            android:gravity="center"
+            android:textColor="@color/yellow"
+            android:textSize="20sp"
+            android:textStyle="bold" />-->
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardview1"
+            android:layout_centerHorizontal="true"
+            android:text="@string/title_work_today"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/cardview"
+            android:layout_below="@id/title"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="10dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="5dp"
+            android:scrollbars="none" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="20dp">
+
+            <ImageView
+                android:id="@+id/fingerPrint"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_fingerprint"
+                tools:ignore="ContentDescription"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:id="@+id/mainNavigationView"
+        app:headerLayout="@layout/drawer_header_layout"
+        app:menu="@menu/main_navigation_view_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

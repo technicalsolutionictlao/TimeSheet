@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:padding="10dp"
+    tools:context=".WorkTimeDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        tools:ignore="UselessParent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="50dp">
+
+            <ImageView
+                android:id="@+id/profile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_account_circle"
+                tools:ignore="ContentDescription" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardview"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ym"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_alignParentStart="true"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:typeface="monospace" />
+
+        <ImageView
+            android:id="@+id/calendar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/name"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_calendar"
+            tools:ignore="ContentDescription" />
+
+        <RadioGroup
+            android:id="@+id/radio"
+            android:layout_below="@+id/calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/real_time"
+                android:id="@+id/real_time"
+                android:checked="true"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/modify"
+                android:id="@+id/modify_time"
+                android:checked="false"
+                android:layout_marginStart="20dp"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/title_all_time_in_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radio"
+            android:padding="10dp"
+            android:text="@string/all_time_in_month"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/all_time_in_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_all_time_in_month"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            android:typeface="monospace" />
+
+
+        <TextView
+            android:id="@+id/title_total_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/all_time_in_month"
+            android:padding="10dp"
+            android:text="@string/working_time"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/total_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_total_time"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            android:typeface="monospace" />
+
+        <TextView
+            android:id="@+id/title_lost_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/total_time"
+            android:padding="10dp"
+            android:text="@string/lost_time_in_month"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lost_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_lost_time"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            android:typeface="monospace" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple_700"
+            android:text="@string/export"
+            android:textStyle="bold|italic"
+            app:drawableEndCompat="@drawable/ic_arrow_forward"
+            android:id="@+id/export"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/lost_time"
+            android:padding="10dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
